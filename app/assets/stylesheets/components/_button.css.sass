@@ -1,0 +1,36 @@
+.button
+  height: 39px
+  display: inline-block
+  padding: 0 10px
+  font-size: 13px
+  text-decoration: none
+  line-height: 39px
+  letter-spacing: -0.01em
+  color: #e0edf8
+  background: #000
+  +border-radius(4px)
+
+  &.twitter
+    padding-left: 28px
+    background: sprite($sprite, b_twitter, 10px, 10px) no-repeat
+
+  &.facebook
+    padding-left: 23px
+    background: sprite($sprite, b_facebook, 11px, 10px) no-repeat
+
+  &.twitter,
+  &.facebook
+    color: #d1e1f4
+    background-color: $purple
+
+  &.ios
+    padding-left: 31px
+    background: $blue sprite($sprite, b_ios, 10px, 8px) no-repeat
+
+  &.android
+    padding-left: 31px
+    background: $green sprite($sprite, b_android, 9px, 8px) no-repeat
+
+  &.kindle
+    padding-left: 27px
+    background: $orange sprite($sprite, b_kindle, 10px, 10px) no-repeat

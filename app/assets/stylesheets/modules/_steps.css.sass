@@ -1,0 +1,91 @@
+.mod-steps
+  background: image-url("bg_steps.png") no-repeat center top
+  text-align: center
+
+  h1
+    padding-top: 50px
+    font-size: 48px
+    font-weight: 300
+    letter-spacing: -0.025em
+
+    span.show
+      display: none
+
+    +max-width(600px)
+      font-size: 36px
+
+    +max-width(400px)
+      font-size: 30px
+      padding-bottom: 14px
+      span.hide
+        display: none
+      span.show
+        display: inline
+
+  h2
+    padding-top: 60px
+    padding-bottom: 5px
+    font-size: 17px
+    font-weight: 600
+
+  li
+    min-height: 160px
+    padding-bottom: 60px
+    font-size: 15px
+    line-height: 1.333
+    background: image-url("bg_steps_li.png") no-repeat bottom center
+
+    &.contact h2
+      background: image-url("i_contact.png") no-repeat center 30px
+
+    &.consultation h2
+      background: image-url("i_consult.png") no-repeat center 20px
+
+    &.return h2
+      background: image-url("i_return.png") no-repeat center 22px
+
+  li:last-child
+    background: none
+
+  +max-width(540px)
+    h2
+      padding-top 40px
+
+    li
+      padding-bottom: 40px
+
+    li:last-child
+      padding-bottom: 60px
+
+  +max-width(400px)
+    h2
+      padding-top: 4px
+
+    li
+      min-height: 0
+      padding: 0 10px 25px
+      background: none
+      text-align: left
+
+      &:last-child
+        padding-bottom: 45px
+
+    li.contact h2,
+    li.consultation h2,
+    li.return h2
+      display: inline-block
+
+    li.contact h2
+      padding-left: 26px
+      background-position: left center
+      background-size: 20px auto
+
+    li.consultation h2
+      padding-left: 22px
+      background-position: left center
+      background-size: 15px auto
+
+    li.return h2
+      padding-left: 22px
+      background-position: left center
+      background-size: 16px auto

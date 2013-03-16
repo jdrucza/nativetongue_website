@@ -1,0 +1,89 @@
+.mod-header
+  @extend %clearfix
+  margin-bottom: 5px
+  padding: 10px 10px 0
+  font-size: 14px
+  font-weight: 600
+  letter-spacing: -0.05em
+
+  .logo
+    width: 289px
+    height: 46px
+    margin-bottom: 10px
+    float: left
+    +data-uri-bg("logo.png")
+    background-size: 100%
+
+    +max-width(420px)
+      width: 200px
+
+    a
+      height: 46px
+      display: block
+      +hide-text
+
+  nav
+    float: right
+    margin-bottom: 10px
+    line-height: 39px
+
+    li
+      float: left
+
+      a
+        display: block
+        padding: 0 7px 0 8px
+        text-decoration: none
+        color: $purple
+
+  .home
+    width: 29px
+    +hide-text
+    background: sprite($sprite, i_home, 8px, 13px) no-repeat
+
+  a.twitter
+    margin-left: 8px
+
+  a.facebook
+    margin-left: 5px
+
+  &.toggle
+    &.active nav
+      display: block
+
+    nav
+      clear: both
+      float: none
+      display: none
+      margin: 0 -10px 10px
+      padding-top: 10px
+
+    ul
+      border-top: solid 1px rgba($purple, .3)
+
+    li
+      float: none
+      border-bottom: solid 1px rgba($purple, .3)
+
+      a
+        padding: 0 15px
+        font-size: 16px
+        background: rgba(#fff,.2)
+
+        &:hover,
+        &:focus
+          background: rgba(#fff,.4)
+
+    .home
+      width: auto
+      text-indent: 0
+
+    .twitter,
+    .facebook
+      display: none
+
+  .toggle_link
+    top: 29px
+    right: 10px
+    position: absolute
+    background-color: $purple

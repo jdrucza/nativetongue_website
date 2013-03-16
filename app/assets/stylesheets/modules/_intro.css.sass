@@ -1,0 +1,280 @@
+.mod-intro
+  margin-bottom: 10px
+
+  .heading
+    text-align: center
+
+    h1
+      display: inline-block
+      padding: 35px 90px
+      font-size: 50px
+      font-weight: 300
+      color: $purple
+      +border-radius(80px)
+      +data-uri-bg("bg_gradient.png", repeat-x)
+
+      span
+        display: block
+        margin-top: 8px
+        font-size: 26px
+
+      +max-width(800px)
+        padding: 20px 45px
+        font-size: 40px
+
+        span
+          margin-bottom: 0px
+
+      +max-width(500px)
+        padding: 10px 20px
+        +border-radius(25px)
+
+        span
+          margin-bottom: 5px
+
+    .os
+      font-size: 0
+      margin-top: -18px
+
+      li
+        width: 46px
+        height: 46px
+        display: inline-block
+        margin: 0 2px
+        +hide-text
+
+      +max-width(800px)
+        margin-top: 0px
+
+      +max-width(500px)
+        margin-top: 5px
+
+    .android
+      background: sprite($sprite, i_android)
+
+    .ios
+      background: sprite($sprite, i_ios)
+
+    .contact
+      margin-top: 18px
+
+      a
+        width: 285px
+        height: 72px
+        display: inline-block
+        font-size: 30px
+        font-weight: 600
+        line-height: 72px
+        text-align: center
+        color: #fff
+        +border-radius(5px)
+        +text-shadow(0 1px 1px rgba(#000,.2))
+
+        img
+          position: relative
+          top: 3px
+
+        +max-width(800px)
+          width: 240px
+          height: 55px
+          font-size: 24px
+          line-height: 55px
+
+          img
+            width: 18px
+            top: 1px
+
+        +max-width(540px)
+          width: 44%
+          min-width: 180px
+          height: 50px
+          font-size: 20px
+          line-height: 50px
+
+          img
+            width: 15px
+            top: 1px
+
+        +max-width(430px)
+          width: 80%
+
+          img
+
+      span
+        display: inline-block
+        margin-bottom: 4px
+        font-style: italic
+
+        +max-width(430px)
+          display: block
+
+    .enquire
+      background: $button-green
+      +box-shadow(inset 0 -5px 0 #72a20a)
+
+    .call
+      background: $button-purple
+      +box-shadow(inset 0 -5px 0 #71407c)
+
+      img
+
+  .apps
+    margin-bottom: 10px
+    padding: 30px
+    font-size: 0
+    color: #7e92a7
+    background: rgba(#9cb6d2,.15)
+    +background(linear-gradient(rgba(#e5eef8,.15), rgba(#9cb6d2,.15)))
+    +border-radius(0 0 10px 10px)
+
+    > li
+      width: 33%
+      display: inline-block
+      margin-left: 0.5%
+      font-size: 13px
+
+      +max-width(500px)
+        width: 100%
+        margin-top: 20px
+
+      &:first-child
+        margin: 0
+
+      li
+        display: inline-block
+        margin: 3px 3px 0 0
+
+    ul
+      margin-top: 3px
+      font-size: 0
+
+    .ie8 &
+      margin: 0 -5px 10px -5px
+
+  .map
+    max-width: 1209px
+    position: relative
+    margin: 50px auto -9px
+
+    .screenshots
+      max-width: 100%
+      display: block
+      margin: 0 auto
+
+    .marker
+      width: 79px
+      height: 129px
+      display: none
+      background: sprite($sprite, bg_marker) no-repeat
+      position: absolute
+
+      img
+        top: 8px
+        left: 8px
+        position: absolute
+
+    .bubble1 p,
+    .bubble2 p,
+    .bubble3 p
+      position: absolute
+      z-index: 2
+      font-size: 13px
+      line-height: 1.15384
+      color: #fff
+      +text-shadow(0 1px 1px rgba(#000,.1))
+
+      b
+        display: block
+        font-weight: bold
+
+    .bubble1 p,
+    .bubble3 p
+      text-align: center
+
+    .bubble1 p
+      width: 265px
+      height: 168px
+      top: -98px
+      left: -244px
+      padding: 32px 50px 0 38px
+      background: sprite($sprite, bg_bubble1) no-repeat
+
+    .bubble2 p
+      width: 273px
+      height: 131px
+      top: 57px
+      left: -3px
+      padding: 50px 12px 0 30px
+      background: sprite($sprite, bg_bubble2) no-repeat
+
+      .ie8 &
+        padding: 45px 12px 0 30px
+
+    .bubble3 p
+      width: 220px
+      height: 187px
+      top: -164px
+      padding: 22px 12px 0 8px
+      background: sprite($sprite, bg_bubble3) no-repeat
+
+    +min-width(1000px)
+      height: 496px
+      background: image-url("bg_map.png") center bottom no-repeat
+
+      .marker_container
+        width: 1000px
+        height: 496px
+        position: relative
+        margin: -345px auto 0
+
+      .marker
+        display: block
+
+    .ie8 &,
+    .ie9 &
+      height: 496px
+      background: image-url("bg_map.png") center bottom no-repeat
+
+      .marker_container
+        width: 1000px
+        height: 496px
+        position: relative
+        margin: -345px auto 0
+
+      .marker
+        display: block
+
+  .illustration
+    margin-top: 238px
+    text-align: center
+    background: image-url("bg_illustration.png") center top
+
+    img
+      margin-top: -204px
+      padding-bottom: 218px
+
+    +max-width(842px)
+      margin-top: 210px
+
+      img
+        width: 100%
+        min-width: 240px
+        margin-top: -180px
+
+    +max-width(700px)
+      margin-top: 170px
+
+      img
+        margin-top: -140px
+
+    +max-width(560px)
+      margin-top: 125px
+
+      img
+        margin-top: -100px
+
+    +max-width(400px)
+      margin-top: 80px
+
+      img
+        margin-top: -60px

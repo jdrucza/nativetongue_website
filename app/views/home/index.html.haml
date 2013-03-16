@@ -1,4 +1,106 @@
-%h3 Home
-- @users.each do |user|
-  %p
-    User: #{link_to user.name, user}
+%section.mod-intro
+  .layout-wrap
+    .heading
+      %h1
+        Innovative Mobile Apps & Games
+        %span that help people learn a second language.
+
+      %ul.os
+        %li.android Android
+        %li.ios iOS
+
+  .map
+    = image_tag 'apps.png', :alt => 'Screenshots of Native Tongue apps', :class => 'screenshots'
+
+    .marker_container
+      .marker.bubble1{:style => 'top: 240px; left: 230px'}
+        = image_tag 'avatar.png'
+        %p
+          Love this app! Great for getting to know vocab, probably my favourite game on android right now, great development A+++
+          %b (Spanish Smash review, Google Play)
+
+      .marker.bubble2{:style => 'top: 240px; left: 460px'}
+        = image_tag 'avatar.png'
+        %p
+          Great for getting to know vocab, probably my favourite game on android right now, great development A+++
+          %b (Spanish Smash review, Google Play)
+
+      .marker.bubble3{:style => 'top: 240px; left: 750px'}
+        = image_tag 'avatar.png'
+        %p
+          It's like eating broccoli that tastes like cookies. I love your app "mandarin madness". The engagement is amazing, the aesthetics (music/illustration) are incredible.
+          %b (Bruce Flaherty, Minnesota)
+
+  .layout-wrap
+    %ul.apps
+      %li
+        Mandarin Madness
+        %ul
+          %li= link_to 'iPhone & iPad', '#', :class => 'button ios'
+          %li= link_to 'Android', '#', :class => 'button android'
+          %li= link_to 'Kindle Fire', '#', :class => 'button kindle'
+      %li
+        Spanish Smash
+        %ul
+          %li= link_to 'iPhone & iPad', '#', :class => 'button ios'
+          %li= link_to 'Android', '#', :class => 'button android'
+          %li= link_to 'Kindle Fire', '#', :class => 'button kindle'
+      %li
+        English Eruption
+        %ul
+          %li= link_to 'iPhone & iPad', '#', :class => 'button ios'
+          %li= link_to 'Android', '#', :class => 'button android'
+          %li= link_to 'Kindle Fire', '#', :class => 'button kindle'
+
+    %section.mod-usp
+      %h1 Forget Boring flash cards. Play a game instead!
+      %ul.left
+        %li Learn more quickly than with flash cards.
+        %li Learn to recognize both the text as well as the sound, spoken by a native speaker.
+        %li 3 stages and 41 levels that each get progressively more difficult to ensure your mastery of a set of words.
+      %ul
+        %li Fun arcade style gameplay that makes learning vocabulary fun instead of tedious.
+        %li Ideal for beginner – intermediate language students.
+        %li Ideal for travellers to pick up some useful vocabulary whilst on the plane, train, bus or boat.
+
+%section.mod-reviews
+  .layout-wrap
+    .industry.quote
+      %h1 Industry Reviews
+      %ul
+        %li
+          %blockquote
+            A gem of a learning application, with a great concept for combining education and gaming fun.
+            %footer - Michael Vallez, Crazy Mike’s App
+      = link_to 'previous', '#', :class => 'prev'
+      %span.next next
+
+    .press.quote
+      %h1 Media Press
+      %ul
+        %li
+          %blockquote
+            Before you know it you can count to ten, or know how to talk about basic clothing. This app is great for ages young and old.
+            %footer - Matt Beeche, Shoe String Startups
+      %span.prev previous
+      = link_to 'next', '#', :class => 'next'
+
+.layout-wrap
+  %section.mod-subscribe
+    %h1 Fill Out the form below and Receive Free Updates!
+    %form{:method => 'post', :action => '#'}
+      .group
+        %label{:for => 'firstname'} First Name:
+        %input#firstname{:type => 'text'}
+      .group
+        %label{:for => 'email'} Email Address:
+        %input#email{:type => 'email'}
+      .group.last
+        %span.label Preferred Format:
+        %label.radio
+          %input{:type => 'radio', :name => 'emailtype', :checked => 'checked'} HTML
+        %label.radio
+          %input{:type => 'radio', :name => 'emailtype'} Text
+        %label.radio
+          %input{:type => 'radio', :name => 'emailtype'} Mobile
+        %input{:type => 'submit', :value => 'Submit'}

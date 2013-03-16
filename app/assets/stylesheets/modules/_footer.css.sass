@@ -1,0 +1,165 @@
+.mod-footer
+  letter-spacing: -0.01em
+  color: #b7b7b7
+
+  a
+    text-decoration: none
+    color: #b7b7b7
+
+    &:hover
+      color: #c1dfff
+
+  > h1
+    +hide
+
+  h2
+    font-size: 17px
+    font-weight: 600
+    color: #fff
+
+  ul
+    line-height: 1.5
+
+  .inner
+    min-height: 263px
+    +data-uri-bg("bg_footer.gif", repeat)
+
+    .layout-wrap
+      padding-left: 400px
+
+      +max-width(930px)
+        padding-left: 10px
+
+      .ie8 &
+        width: 1040px
+
+  .social
+    width: 369px
+    height: 263px
+    top: -12px
+    left: 10px
+    position: absolute
+    padding: 20px
+    font-size: 13px
+    color: #686868
+    background: image-url("bg_social.jpg")
+    +border-radius(5px)
+
+    +max-width(930px)
+      display: none
+
+    .corner
+      width: 6px
+      height: 9px
+      top: 3px
+      left: -6px
+      position: absolute
+      display: block
+      +data-uri-bg("bg_corner.png")
+
+    a
+      color: #0097c9
+
+    h2
+      font-weight: normal
+      color: #000
+
+      b
+        font-size: 16px
+        font-weight: bold
+
+    .facebook
+      margin-bottom: 21px
+
+      h2
+        height: 45px
+        margin-bottom: 11px
+        padding: 14px 0 0 45px
+        background: sprite($sprite, logo_small) no-repeat
+
+    .twitter
+      h2
+        margin-bottom: 5px
+        padding-left: 41px
+        line-height: 32px
+        background: sprite($sprite, i_twitter) no-repeat
+
+      ul
+        line-height: 1.3846
+        margin-bottom: 20px
+
+  .blog,
+  .products,
+  .contact
+    h2
+      margin-bottom: 12px
+      letter-spacing: 0.025em
+
+  .blog,
+  .products
+    width: 75%
+    float: left
+    margin: 25px 0
+
+  .products
+    width: 25%
+
+    +max-width(930px)
+      width: 157px
+      float: right
+
+  .blog
+    padding-right: 20px
+
+    li
+      padding-left: 9px
+      +data-uri-bg("i_li_footer.png", left 8px no-repeat)
+
+  .contact
+    position: relative
+    clear: left
+
+    .logo
+      width: 157px
+      top: 0
+      right: 0
+      position: absolute
+      display: block
+      padding: 29px 0 0 3px
+      +data-uri-bg("logo_white.png")
+
+      a
+        color: #fff
+
+  .links
+    padding: 16px 10px 26px
+    font-size: 13px
+    color: #949494
+
+    a
+      color: #949494
+
+    ul,
+    li,
+    p
+      display: inline
+
+    li::before
+      content: " - "
+
+  +max-width(670px)
+    .blog,
+    .products,
+    .contact
+      width: 100%
+      float: none
+
+    .blog
+      margin-top: 0
+
+    .inner
+      padding: 20px 0
+
+    .contact .logo
+      position: static
+      margin-top: 20px

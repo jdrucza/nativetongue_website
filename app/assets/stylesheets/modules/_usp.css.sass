@@ -1,0 +1,35 @@
+.mod-usp
+  @extend %clearfix
+  margin-bottom: 60px
+  padding: 30px
+  letter-spacing: -0.025em
+  line-height: 20px
+  background: rgba(#ebf2f8,.5)
+  +border-radius(10px)
+  //position: relative
+
+  h1
+    margin-bottom: 20px
+    padding-left: 18px
+    font-size: 15.86px
+    font-weight: bold
+    letter-spacing: -0.035em
+    background: sprite($sprite, i_thumbs, 0, 2px) no-repeat
+
+  ul
+    float: left
+    width: 50%
+    padding-left: 30px
+
+    &.left
+      padding-left: 0
+
+    li
+      display: inline-block
+      width: 100%
+      padding-left: 11px
+      background: sprite($sprite, i_li, 2px, 8px) no-repeat
+
+    +max-width(620px)
+      width: 100%
+      padding-left: 0

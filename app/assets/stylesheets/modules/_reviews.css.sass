@@ -1,0 +1,36 @@
+.mod-reviews
+  margin-bottom: 60px
+  +data-uri-bg("bg_gradient_blue.png", left bottom repeat-x)
+
+  .layout-wrap
+    @extend %clearfix
+    min-height: 248px
+    padding-top: 60px
+    background: image-url("bg_reviews.png") center bottom no-repeat
+
+    +max-width(720px)
+      min-height: 0
+      padding-top: 0
+      background: transparent
+
+  .industry,
+  .press
+    width: 38.5%
+
+    +max-width(720px)
+      width: 48%
+
+    +max-width(600px)
+      width: 100%
+
+  .industry
+    h1
+      padding-left: 17px
+      background: sprite($sprite, i_edit, 0, 4px) no-repeat
+
+  .press
+    float: right
+
+    h1
+      padding-left: 19px
+      background: sprite($sprite, i_press, 0, 3px) no-repeat
