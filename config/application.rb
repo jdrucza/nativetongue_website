@@ -75,5 +75,7 @@ module NativetongueWebsite
 
     # For Heroku asset precompile during slug compilation
     config.assets.initialize_on_precompile = false
+
+    config.assets.precompile += ['modernizr.js']
   end
 end
