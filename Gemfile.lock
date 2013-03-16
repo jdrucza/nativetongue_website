@@ -128,6 +128,7 @@ GEM
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     mime-types (1.21)
+    modernizr-rails (2.6.2)
     multi_json (1.6.1)
     nokogiri (1.5.6)
     orm_adapter (0.4.0)
@@ -238,6 +239,7 @@ DEPENDENCIES
   jquery-rails
   launchy (>= 2.2.0)
   machinist (>= 2.0)
+  modernizr-rails
   pg (>= 0.14.1)
   quiet_assets (>= 1.0.1)
   rails (= 3.2.12)
