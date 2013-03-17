@@ -16,13 +16,13 @@
 
       %nav
         %ul
-          %li= link_to 'Home', '#', :class => 'home'
+          %li= link_to 'Home', '/', :class => 'home'
           -#%li= link_to 'About Us', '#'
           -#%li= link_to 'Our Blog', '#'
-          %li= link_to 'Need an App?', '#'
+          %li= link_to 'Need an App?', consulting_path
           -#%li= link_to 'Schools', '#'
           -#%li= link_to 'Press', '#'
-          %li= link_to 'LP Strategy', '#'
+          -#%li= link_to 'LP Strategy', '#'
           -#%li= link_to 'Contact', '#'
           %li.twitter= link_to 'Follow Us', '#', :class => 'button twitter'
           %li.facebook= link_to 'Like Us', '#', :class => 'button facebook'
@@ -49,18 +49,20 @@
           .blog
             %h2 Latest Blog Posts
             %ul
-              %li= link_to 'Language stories #1 – The Beijing Diaries', '#'
-              %li= link_to 'Winners for the Spanish Is Your Amigo Promotion!', '#'
-              %li= link_to 'Marketing For Mobile Apps – Tips And Tricks', '#'
-              %li= link_to 'What are some Letterpress games won in very few turns?', '#'
-              %li= link_to 'Win a Spanish lesson and textbook from Spanish Is Your Amigo', '#'
+              %li
+                Our blog will be back soon...
+              -#%li= link_to 'Language stories #1 – The Beijing Diaries', '#'
+              -#%li= link_to 'Winners for the Spanish Is Your Amigo Promotion!', '#'
+              -#%li= link_to 'Marketing For Mobile Apps – Tips And Tricks', '#'
+              -#%li= link_to 'What are some Letterpress games won in very few turns?', '#'
+              -#%li= link_to 'Win a Spanish lesson and textbook from Spanish Is Your Amigo', '#'
 
           .products
             %h2 Our Products
             %ul
-              %li= link_to 'English Eruption', '#'
-              %li= link_to 'Mandarin Madness', '#'
-              %li= link_to 'Spanish Smash', '#'
+              %li= link_to 'English Eruption', 'http://www.englisheruption.com'
+              %li= link_to 'Mandarin Madness', 'http://www.mandarinmadness.com'
+              %li= link_to 'Spanish Smash', 'http://www.spanishsmash.com'
 
           .contact
             %h2 Contact Us

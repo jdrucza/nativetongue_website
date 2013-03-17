@@ -19,7 +19,7 @@
           Love this app! Great for getting to know vocab, probably my favourite game on android right now, great development A+++
           %b (Spanish Smash review, Google Play)
 
-      .marker.bubble2{:style => 'top: 240px; left: 460px'}
+      .marker.bubble2{:style => 'top: 280px; left: 460px'}
         = image_tag 'avatar.png'
         %p
           Great for getting to know vocab, probably my favourite game on android right now, great development A+++
@@ -36,21 +36,21 @@
       %li
         Mandarin Madness
         %ul
-          %li= link_to 'iPhone & iPad', '#', :class => 'button ios'
+          %li= link_to 'iPhone & iPad', 'https://itunes.apple.com/app/learn-chinese-mandarin-madness/id494800742?mt=8', :class => 'button ios'
           %li= link_to 'Android', '#', :class => 'button android'
           %li= link_to 'Kindle Fire', '#', :class => 'button kindle'
       %li
         Spanish Smash
         %ul
-          %li= link_to 'iPhone & iPad', '#', :class => 'button ios'
+          %li= link_to 'iPhone & iPad', 'https://itunes.apple.com/app/learn-spanish-spanish-smash/id524637598?mt=8', :class => 'button ios'
           %li= link_to 'Android', '#', :class => 'button android'
           %li= link_to 'Kindle Fire', '#', :class => 'button kindle'
       %li
         English Eruption
         %ul
-          %li= link_to 'iPhone & iPad', '#', :class => 'button ios'
-          %li= link_to 'Android', '#', :class => 'button android'
-          %li= link_to 'Kindle Fire', '#', :class => 'button kindle'
+          %li= link_to 'iPhone & iPad', 'https://itunes.apple.com/app/learn-english-english-eruption/id505864135?mt=8', :class => 'button ios'
+          %li= link_to 'Android', '#coming-soon', :class => 'button android coming-soon'
+          %li= link_to 'Kindle Fire', '#coming-soon', :class => 'button kindle coming-soon'
 
     %section.mod-usp
       %h1 Forget Boring flash cards. Play a game instead!
@@ -85,22 +85,22 @@
       %span.prev previous
       = link_to 'next', '#', :class => 'next'
 
-.layout-wrap
-  %section.mod-subscribe
-    %h1 Fill Out the form below and Receive Free Updates!
-    %form{:method => 'post', :action => '#'}
-      .group
-        %label{:for => 'firstname'} First Name:
-        %input#firstname{:type => 'text'}
-      .group
-        %label{:for => 'email'} Email Address:
-        %input#email{:type => 'email'}
-      .group.last
-        %span.label Preferred Format:
-        %label.radio
-          %input{:type => 'radio', :name => 'emailtype', :checked => 'checked'} HTML
-        %label.radio
-          %input{:type => 'radio', :name => 'emailtype'} Text
-        %label.radio
-          %input{:type => 'radio', :name => 'emailtype'} Mobile
-        %input{:type => 'submit', :value => 'Submit'}
+-#.layout-wrap
+-#  %section.mod-subscribe
+-#    %h1 Fill Out the form below and Receive Free Updates!
+-#    %form{:method => 'post', :action => '#'}
+-#      .group
+-#        %label{:for => 'firstname'} First Name:
+-#        %input#firstname{:type => 'text'}
+-#      .group
+-#        %label{:for => 'email'} Email Address:
+-#        %input#email{:type => 'email'}
+-#      .group.last
+-#        %span.label Preferred Format:
+-#        %label.radio
+-#          %input{:type => 'radio', :name => 'emailtype', :checked => 'checked'} HTML
+-#        %label.radio
+-#          %input{:type => 'radio', :name => 'emailtype'} Text
+-#        %label.radio
+-#          %input{:type => 'radio', :name => 'emailtype'} Mobile
+-#        %input{:type => 'submit', :value => 'Submit'}
