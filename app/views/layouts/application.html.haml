@@ -5,7 +5,7 @@
     %meta{:name => 'viewport', :content => 'width=device-width, initial-scale=1'}
     %title Native Tongue
     = javascript_include_tag 'modernizr'
-    = javascript_include_tag '//use.typekit.net/wpn6xkp.js'
+    = javascript_include_tag 'http://use.typekit.net/wpn6xkp.js'
     :javascript
       try{Typekit.load();}catch(e){}
     = stylesheet_link_tag 'application'
@@ -17,13 +17,13 @@
       %nav
         %ul
           %li= link_to 'Home', '#', :class => 'home'
-          %li= link_to 'About Us', '#'
-          %li= link_to 'Our Blog', '#'
-          %li= link_to 'Our Products', '#'
-          %li= link_to 'Schools', '#'
-          %li= link_to 'Press', '#'
+          -#%li= link_to 'About Us', '#'
+          -#%li= link_to 'Our Blog', '#'
+          %li= link_to 'Need an App?', '#'
+          -#%li= link_to 'Schools', '#'
+          -#%li= link_to 'Press', '#'
           %li= link_to 'LP Strategy', '#'
-          %li= link_to 'Contact', '#'
+          -#%li= link_to 'Contact', '#'
           %li.twitter= link_to 'Follow Us', '#', :class => 'button twitter'
           %li.facebook= link_to 'Like Us', '#', :class => 'button facebook'
 
@@ -65,12 +65,12 @@
           .contact
             %h2 Contact Us
             %address
-              2nd Floor, 456 Lorem Street - Consectetur Elit - W1B 3HH
+              173 City Road, Melbourne, Australia
               %br
-              %span.logo= link_to 'info@nativetongue.com', 'mailto:info@nativetongue.com'
+              %span.logo= link_to 'hello@nativetongue.com', 'mailto:info@nativetongue.com'
 
       .links.layout-wrap
-        %p © 2001-2012 NativeTongue.com - All rights Reserved
+        %p © 2011-2013 NativeTongue.com - All rights Reserved
         %ul
           %li= link_to 'Terms & Conditions', '#'
           %li= link_to 'Privacy Policy', '#'
