@@ -7,9 +7,10 @@
         %li.android Android
         %li.ios iOS
       .contact
-        = link_to 'Enquire Now', '#', :class => 'enquire'
+        -#= link_to 'Enquire Now', '#', :class => 'enquire'
+        = mail_to 'hello@nativetongu.com', 'Enquire Now', subject:"Mobile app development enquiry", class:'enquire'
         %span or
-        = link_to '#', :class => 'call' do
+        = link_to 'tel:1300792720', :class => 'call' do
           = image_tag 'i_phone_white.png'
           1300 792 720
 
@@ -49,7 +50,7 @@
 %section.mod-steps
   .layout-wrap
     %h1
-      %span.hide Our Process
+      Our Process
     %ol
       %li.contact
         %h2 1. You get in Contact
