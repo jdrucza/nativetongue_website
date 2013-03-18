@@ -31,3 +31,4 @@ gem "hub", ">= 1.10.2", :require => nil, :group => [:development]
 gem "webrick", :group => :development
 gem "jbuilder"
 gem 'modernizr-rails'
+gem 'rack-cachely'

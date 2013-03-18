@@ -6,6 +6,12 @@ NativetongueWebsite::Application.configure do
 
   # Full error reports are disabled and caching is turned on
   config.consider_all_requests_local       = false
+
+  # Make sure to remove Rack::Cache if you are using it:
+  config.middleware.delete "Rack::Cache"
+  # Add the Rack::Cachely middleware:
+  config.middleware.use Rack::Cachely
+  # Turn on caching:
   config.action_controller.perform_caching = true
 
   # Disable Rails's static asset server (Apache or nginx will already do this)
