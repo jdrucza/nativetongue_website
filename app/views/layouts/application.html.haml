@@ -24,8 +24,11 @@
           -#%li= link_to 'Press', '#'
           -#%li= link_to 'LP Strategy', '#'
           -#%li= link_to 'Contact', '#'
-          %li.twitter= link_to 'Follow Us', '#', :class => 'button twitter'
-          %li.facebook= link_to 'Like Us', '#', :class => 'button facebook'
+          %li.twitter= link_to 'Follow Us', 'https://twitter.com/nativetonguelab', :class => 'button twitter', id: 'custom-twitter-button'
+          %li.facebook= link_to 'Like Us', 'http://www.facebook.com/nativetonguelab', :class => 'button facebook'
+      .actual-twitter_button
+        = link_to 'Follow Us', 'https://twitter.com/nativetonguelab', :class => 'twitter-follow-button', "data-show-count"=>"false", "data-lang"=>"en", id: 'actual-twitter-button'
+
 
     = yield
 
@@ -35,16 +38,25 @@
         .layout-wrap
           .social
             %span.corner
-            .facebook
-              %h2 <b>Native Tongue</b> on Facebook
-              [insert Facebook code]
+            -#.facebook
+            -#  %h2 <b>Native Tongue</b> on Facebook
+            -#  .fb-like-box{"data-href"=>"http://www.facebook.com/nativetonguelab", "data-width"=>"292", "data-show-faces"=>"true", "data-stream"=>"true", "data-header"=>"true"}}
 
             .twitter
-              %h2 Latest <b>Tweets</b>
-              %ul
-                %li 15 minutes ago - <a href="#">@lorem1973</a> Class aptent taciti sociosqu ad litora torquent per conubia nostra. <a href="#">#nativetongue2013</a>
-              %span.prev previous
-              = link_to 'next', '#', :class => 'next'
+              %h2 Latest
+              = link_to 'Tweets by @nativetonguelab', "https://twitter.com/nativetonguelab", class:"twitter-timeline", "data-widget-id" => "313188421508153344"
+              :javascript
+                !function(d,s,id){
+                  var js,fjs=d.getElementsByTagName(s)[0];
+                  if(!d.getElementById(id)){js=d.createElement(s);js.id=id;
+                  js.src="//platform.twitter.com/widgets.js";
+                  fjs.parentNode.insertBefore(js,fjs);}
+                }(document,"script","twitter-wjs");
+
+              -#%ul
+              -#  %li 15 minutes ago - <a href="#">@lorem1973</a> Class aptent taciti sociosqu ad litora torquent per conubia nostra. <a href="#">#nativetongue2013</a>
+              -#%span.prev previous
+              -#= link_to 'next', '#', :class => 'next'
 
           .blog
             %h2 Latest Blog Posts
@@ -78,3 +90,12 @@
           %li= link_to 'Privacy Policy', '#'
 
     = javascript_include_tag 'application'
+    #fb-root
+    :javascript
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=168575276558048";
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
