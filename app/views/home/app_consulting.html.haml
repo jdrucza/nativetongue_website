@@ -172,7 +172,6 @@
     %h3 How can we help?
   .modal-body
     =simple_form_for Enquiry.new do |f|
-      -#= f.input :name, label: false, placeholder: "Your name?", required: true, pattern: "[^\\W\\d_]+ *[^\\W\\d_]*"
       = f.input :name, label: false, placeholder: "Your name?", required: true, pattern: " *[^ ]+.*"
       = f.input :email, label: false, placeholder: "Email and/or phone number", as: :string, required: true, pattern: ".*\\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}\\b.*|.*\\b[0-9]{10,15}\\b.*"
       = f.input :content, label: false, placeholder: "Tell us a little about your idea or needs...", as: :text, hint: "We'll never spam you or give your details to anyone else, ever, unless required to by law."
