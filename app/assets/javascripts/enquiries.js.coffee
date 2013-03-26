@@ -34,6 +34,7 @@ hideSpinner = ()->
 $(document).ready ->
   $("#send_enquiry_button").click (event)->
     showSpinner()
+    $(this).attr('disabled','disabled')
     name = $("#enquiry_name")[0].value
     email = $("#enquiry_email")[0].value
     content = $("#enquiry_content")[0].value
@@ -54,4 +55,5 @@ $(document).ready ->
       hideSpinner()
       $("#enquiryModal").modal("hide")
       $("#infoModal").modal("show")
+      $("#send_enquiry_button").removeAttr('disabled')
     )
