@@ -2,7 +2,7 @@ class EnquiriesController < ApplicationController
   respond_to :json, :html
 
   def create
-    @enquiry = Enquiry.create(params[:enquiry])
+    @enquiry = Enquiry.create!(name: params[:name], email: params[:email], content: params[:content])
     respond_with(@enquiry)
   end
 

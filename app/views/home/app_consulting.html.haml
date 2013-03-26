@@ -187,3 +187,6 @@
     time to discuss your requirements in more detail.
   .modal-footer
     = link_to 'Close', "#", class: "btn btn-primary", id: "close_info_modal_button", "data-dismiss" => "modal"
+
+:javascript
+  window.enquiries_context = {enquiries_url: '#{enquiries_url}', auth_token: '#{form_authenticity_token}'}
