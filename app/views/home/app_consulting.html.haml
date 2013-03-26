@@ -7,8 +7,7 @@
         %li.android Android
         %li.ios iOS
       .contact
-        -#= link_to 'Enquire Now', '#', :class => 'enquire'
-        = mail_to 'hello@nativetongue.com', 'Enquire Now', subject:"Mobile app development enquiry", class:'enquire'
+        = link_to 'Enquire Now', '#enquiryModal', class:'enquire', role:"button", "data-toggle"=>"modal"
         %span or
         = link_to 'tel:1300792720', :class => 'call' do
           = image_tag 'i_phone_white.png'
@@ -81,8 +80,7 @@
           Scoping exercise, the exact cost of which depends on the outcome of the initial consultation. The output of the scoping phase is: -
           %b Wireframes for Every Screen
           descriptions of functions and
-          %b Business Rules Captured as User Stories
-          %span>.
+          %b Business Rules Captured as User Stories.
 
         %h3.star Features
         %ul.features
@@ -168,3 +166,24 @@
             %h2 "It's like eating broccoli that tastes like cookies"
             I love your app "mandarin madness". The engagement is amazing, the aesthetics (music/illustration) are incredible.
             %footer - Bruce Flaherty, Minnesota
+#enquiryModal.modal.hide.fade{tabindex:"-1", role:"dialog", "aria-labelledby"=>"myModalLabel", "aria-hidden"=>"true"}
+  .modal-header
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+    %h3 How can we help?
+  .modal-body
+    =simple_form_for Enquiry.new do |f|
+      = f.input :name, label: false, placeholder: "Your name?"
+      = f.input :email, label: false, placeholder: "Email and/or phone number", as: :string
+      = f.input :content, label: false, placeholder: "Tell us a little about your idea or needs...", as: :text, hint: "We'll never spam you or give your details to anyone else, ever, unless required to by law."
+  .modal-footer
+    = link_to 'Send', "#", class: "btn btn-primary", id: "send_enquiry_button"
+
+#infoModal.modal.hide.fade{tabindex:"-1", role:"dialog", "aria-labelledby"=>"myModalLabel", "aria-hidden"=>"true"}
+  .modal-header
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+    %h3 Thank You
+  .modal-body
+    Thank you very much for your enquiry. One of our consultants will contact you within the next 24 hours to arrange a
+    time to discuss your requirements in more detail.
+  .modal-footer
+    = link_to 'Close', "#", class: "btn btn-primary", id: "close_info_modal_button", "data-dismiss" => "modal"

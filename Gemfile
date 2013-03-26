@@ -18,6 +18,7 @@ gem "launchy", ">= 2.2.0", :group => :test
 gem "capybara", ">= 2.0.2", :group => :test
 gem "machinist", ">= 2.0", :group => :test
 gem "compass-rails"
+gem 'bootstrap-sass', '~> 2.3.1.0'
 gem "devise", ">= 2.2.3"
 gem "devise_invitable", ">= 1.1.5"
 gem "cancan", ">= 1.6.8"

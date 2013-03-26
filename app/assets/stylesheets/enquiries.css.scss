@@ -1,0 +1,19 @@
+// Place all the styles related to the Enquiries controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#enquiryModal, #infoModal {
+  color: $purple;
+  font-family: "myriad-pro", Arial, sans-serif;
+  border: 10px $purple solid;
+  input, textarea {
+    font-family: "myriad-pro", Arial, sans-serif;
+    width: 510px;
+    max-height: 280px;
+  }
+  .modal-header {
+    h3 {
+      font-size: 30px;
+    }
+  }
+}
