@@ -10,6 +10,10 @@
     font-family: "myriad-pro", Arial, sans-serif;
     width: 510px;
     max-height: 280px;
+    &:invalid {
+      border-color: red;
+      color:red;
+    }
   }
   .modal-header {
     h3 {

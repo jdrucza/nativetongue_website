@@ -33,27 +33,37 @@ hideSpinner = ()->
 
 $(document).ready ->
   $("#send_enquiry_button").click (event)->
-    showSpinner()
-    $(this).attr('disabled','disabled')
-    name = $("#enquiry_name")[0].value
-    email = $("#enquiry_email")[0].value
-    content = $("#enquiry_content")[0].value
-    $.post(enquiries_context.enquiries_url+'.json',
-      auth_token: enquiries_context.auth_token,
-      name: name,
-      email: email,
-      content: content
-    ).done((data)->
-      $("#infoModal > .modal-header > h3").html("Thank You!")
-      $("#infoModal > .modal-body").html("Thank you very much for your enquiry. One of our consultants will contact you within the next 24 hours to arrange a
-                                          time to discuss your requirements in more detail.")
-    ).fail((data)->
-      $("#infoModal > .modal-header > h3").html("Communication Error")
-      $("#infoModal > .modal-body").html("Whoops! There seems to be a problem with the internet or our servers. Please
-                                          try again later or email your enquiry to <a href=mailto://hello@nativetongue.com?subject=Enquiry>hello@nativetongue.com</a> instead.")
-    ).always((data)->
-      hideSpinner()
-      $("#enquiryModal").modal("hide")
-      $("#infoModal").modal("show")
-      $("#send_enquiry_button").removeAttr('disabled')
-    )
+    valid = true
+    unless $("#enquiry_email:valid")[0]
+      valid = false
+      $("#enquiry_email").tooltip({trigger:'focus',placement:'bottom', title:"We need either your name or your email so we can get in touch."})
+      $("#enquiry_email").focus()
+    unless $("#enquiry_name:valid")[0]
+      valid = false
+      $("#enquiry_name").tooltip({trigger:'focus',placement:'bottom', title:"Name is required!"})
+      $("#enquiry_name").focus()
+    if valid
+      showSpinner()
+      $(this).attr('disabled','disabled')
+      name = $("#enquiry_name")[0].value
+      email = $("#enquiry_email")[0].value
+      content = $("#enquiry_content")[0].value
+      $.post(enquiries_context.enquiries_url+'.json',
+        auth_token: enquiries_context.auth_token,
+        name: name,
+        email: email,
+        content: content
+      ).done((data)->
+        $("#infoModal > .modal-header > h3").html("Thank You!")
+        $("#infoModal > .modal-body").html("Thank you very much for your enquiry. One of our consultants will contact you within the next 24 hours to arrange a
+                                            time to discuss your requirements in more detail.")
+      ).fail((data)->
+        $("#infoModal > .modal-header > h3").html("Communication Error")
+        $("#infoModal > .modal-body").html("Whoops! There seems to be a problem with the internet or our servers. Please
+                                            try again later or email your enquiry to <a href=mailto://hello@nativetongue.com?subject=Enquiry>hello@nativetongue.com</a> instead.")
+      ).always((data)->
+        hideSpinner()
+        $("#enquiryModal").modal("hide")
+        $("#infoModal").modal("show")
+        $("#send_enquiry_button").removeAttr('disabled')
+      )
