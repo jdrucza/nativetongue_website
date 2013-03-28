@@ -19,8 +19,8 @@ class EnquiriesMailer < ActionMailer::Base
   #
   def received(enquiry)
     @enquiry = enquiry
-    subject = "New Consulting Lead!"
-    subject = "[THIS IS A TEST]" +  subject unless Rails.env.production?
+    subject = "New Apps Consulting Lead!"
+    subject = "THIS IS A TEST ------" +  subject unless Rails.env.production?
 
     mail to: %w(matthew@nativetongue.com james@nativetongue.com), subject: subject
   end
