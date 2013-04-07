@@ -1,0 +1,42 @@
+.content {
+  margin-bottom: 30px;
+  text-align: justify;
+  font-size: 18px;
+  font-weight: 100;
+
+  strong {
+    font-weight: 300;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    text-rendering: initial;
+  }
+
+  ol {
+    li {
+      list-style: decimal;
+      margin-left: 40px;
+    }
+  }
+
+  .intro {
+    color: $purple;
+    font-weight: 400;
+  }
+
+  p { margin-bottom: 14px; }
+
+  h2 {
+    font-weight: 400;
+    font-size: 23px;
+    margin-bottom: 7px;
+  }
+  h3 {
+    font-weight: 400;
+    margin-bottom: 3px;
+  }
+
+  img {
+    margin-top: 5px;
+  }
+}
