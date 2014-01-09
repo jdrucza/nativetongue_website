@@ -32,4 +32,3 @@ gem "hub", ">= 1.10.2", :require => nil, :group => [:development]
 gem "thin"
 gem "jbuilder"
 gem 'modernizr-rails'
-gem 'rack-cachely'
